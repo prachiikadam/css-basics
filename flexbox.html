@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            padding: 0 20px 30px 0;
+        }
+
+        .flexbox-container{
+            width: 500px;
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            /* justify-content align items around main axis 
+            and align items aligns items around cross axis*/
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+        .flex-item{
+            width: 70px;
+            height: 70px;
+            background-color: whitesmoke;
+            border: 3px solid gray;
+            text-align: center;
+            color:aliceblue;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        #flex-item-1{
+            background-color: lightcoral;
+        }
+        #flex-item-2{
+            background-color: cadetblue;
+        }
+        #flex-item-3{
+            background-color: crimson;
+        }
+        #flex-item-4{
+            background-color: darkslategrey;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox-container">
+        <div class="flex-item" id="flex-item-1">1</div>
+        <div class="flex-item" id="flex-item-2">2</div>
+        <div class="flex-item" id="flex-item-3">3</div>
+        <div class="flex-item" id="flex-item-4">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+p{
+    color:green
+}
+
+ul{
+    list-style-type:none
+}
+
+.special{
+    color: orange;
+    font-weight:bold;   
+    background-color: brown ;
+}
+
+a:hover{
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+li[class]{
+    background-color: aqua;
+}
+li[class=ab]{
+    font-size: 300%;
+}
