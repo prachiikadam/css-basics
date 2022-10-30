@@ -5,13 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid</title>
+    <style>
+        /* by default display is block */
+        .container{
+            display: grid;
+            /* grid-template-columns: 200px 200px 200px 100px; */
+            grid-template-columns: 1fr 1fr 3fr; 
+              /* fr stands for fraction */
+            grid-gap: 30px;
+            /* by default grid takes size of content ,
+            if you want to decide shape of grid then use
+            grid auto rows /coloumns for height and width*/
+            /* grid-auto-rows: 300px; */
+            grid-auto-rows: minmax(300px,auto);
+            /*
+            for minmax ,by default height will be 300px
+            if content does not fit ,automatically grid height is increased
+            */
+            
+        }
+        /* .items{
+            background-color: coral;
+            border: 3px solid black;
+        } */
+        .container >div {
+            background-color: #eee;
+        }
+        .container >div :nth-child(odd){
+            background-color: #ddd;
+        }
+        .box1{
+            grid-column: 1/3;
+            grid-row: 1/3;
+        }
+        .box2{
+            align-self: end;
+        }
+        /* rearrange the grid */
+        .box4{
+            grid-column: 2/4;
+            grid-row:2
+        }
+        .box3{
+            grid-column: 1;
+           grid-row: 2/3;   
+           border: 1px solid black;  
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="items">box 1</div>
-        <div class="items">box 2</div>
-        <div class="items">box 3</div>
-        <div class="items">box 4</div>
+        <div class="items box1">box 1</div>
+        <div class="items box2">box 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Similique consequuntur, voluptatibus hic consectetur autem maxime ullam deserunt 
+             doloribus quisquam consequatur corrupti ipsam sint quidem iste unde exercitationem?
+              Totam voluptate labore doloremque iste illum hic natus, rem minus blanditiis magnam 
+              incidunt harum quam, perferendis ut. Veniam, tempora mollitia. Architecto, quis harum.</div>
+        <div class="items box3">box 3</div>
+        <div class="items box4">box 4</div>
     </div>
 </body>
 </html>
